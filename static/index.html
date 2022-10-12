@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Node on Azure</title>
-</head>
-<body>
-<h1>Node.js and Express Hosted on Microsoft Azure Template</h1>
-<p>This repository serves as a template that can be used to create a Node.js and Express based website that can easily
-be hosted on Microsoft Azure.</p>
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  Anthony Mastores
+    Project: Map Mania 
+    Version: 1.5
+    Description: This application is intended to be a reference for Map Mania.
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Map Mania Lite</title>
+        <script src="map-mania.js"></script>
+        <link rel="stylesheet" href="index.css"> 
+    </head>
+    <body onload="initApplication()">
+        <h1>Anthony's &quot;Top Ten&quot; Favorite Places to Visit Game</h1>        
+        Hint: <input id="hint-id" type="text" value="" size="120" disabled><br><br>
+        Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
 
-Additional application functionality includes:<br />
-<a href="fetching-from-server.html">Accessing Node.js Server-Side Application Programming Interfaces (APIs)</a><br />
-<a href="fetching-remote-dog-breeds.html">Accessing Remote Application Programming Interfaces (APIs)</a>
-</body>
+        <div id="myMapID"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3m-vhMVX7Xrh4l0jOOAKAlzyD-OHhlLk&callback=initMap"
+            async defer>
+        </script>
+    </body>
 </html>
