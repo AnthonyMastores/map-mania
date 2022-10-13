@@ -88,34 +88,22 @@ app.get('/test', (request, response) => {
     response.end('<h3>The End.</h3>');
 })
 
-// Return Batman as JSON.
-var spiderMan = {
-	"firstName":"Bruce",
-	"lastName":"Wayne",
-	"preferredName":"Batman",
-	"email":"darkknight@lewisu.edu",
-	"phoneNumber":"800-bat-mann",
-	"city":"Gotham",
-	"state":"NJ",
-	"zip":"07101",
-	"lat":"40.73",
-	"lng":"-74.17",
-	"favoriteHobby":"Flying",
-	"class":"cpsc-24700-001",
-	"room":"AS-104-A",
-	"startTime":"2 PM CT",
-	"seatNumber":"",
-	"inPerson":[
-		"Monday",
-		"Wednesday"
-	],
-	"virtual":[
-		"Friday"
-	]
-}
+// Return places as JSON.
+var favoritePlaces = [
+    {content:'<strong>#1: New Buffalo, MI!<strong>', coordinates:{lat:41.79,lng:-86.74}, iconImagePath:"two.png"},
+    {content:'Phoenix, AZ', coordinates:{lat:33.4484,lng:112.0740}, iconImagePath:"flag.png"},
+    {content:'<strong>#3: Plainfield, IL... Home Sweet Home!<strong>', coordinates:{lat:41.615913,lng:-88.204071}, iconImagePath:"one.png"},
+    {content:'Tamba Bay, FL', coordinates:{lat:27.964157,lng:-82.452606}, iconImagePath:"flag.png"},
+    {content:'Rome, Italy', coordinates:{lat:41.9028,lng:12.4964}, iconImagePath:"flag.png"},
+    {content:'Peloponnese, Greece', coordinates:{lat:37.5079,lng:22.3735}, iconImagePath:"flag.png"},
+    {content:'Myrtle Beach, SC', coordinates:{lat:33.6891,lng:-78.8867}, iconImagePath:"flag.png"},
+    {content:'Vilinus, Lithuania', coordinates:{lat:54.6872,lng:25.2797}, iconImagePath:"flag.png"},
+    {content:'Moscow, Russia', coordinates:{lat:55.7558,lng:37.6173}, iconImagePath:"flag.png"},
+    {content:'Kenosha, WI', coordinates:{lat:42.5847,lng:-87.8212}, iconImagePath:"flag.png"}
+]; 
 
-app.get('/batman', (request, response) => {
-	console.log('Calling "/batman" on the Node.js server.')
+app.get('/places', (request, response) => {
+	console.log('Calling "/places" on the Node.js server.')
 	response.type('application/json')
 	response.send(JSON.stringify(spiderMan, null, 4))
 })
