@@ -9,7 +9,7 @@ let currentPlace;
 let currentPlaceIndex = 9;
 let lat1;
 let lng1;
-let score;
+let score = 10;
 const placeUrl = "https://map-mania-am.azurewebsites.net/places"
   async function start() {
     try {
