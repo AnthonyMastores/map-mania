@@ -5,7 +5,7 @@
 window.onload = function () {
     if (! localStorage.justOnce) {
         localStorage.setItem("justOnce", "true");
-        window.location.reload();
+        initMap()
     }
 }
 var gMap;
