@@ -3,6 +3,14 @@ app = express()
 
 var url = require('url');
 var dt = require('./date-time');
+app.use(express.json());
+const cors = require('cors')
+app.use(
+	cors({
+		origin: "*",
+    methods: ["GET", "POST"],
+	})
+)
 
 const port = process.env.PORT || 3000
 const majorVersion = 1
