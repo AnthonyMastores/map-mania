@@ -19,20 +19,7 @@ app.get('/about', (request, response) => {
 	response.send('About Node.js on Azure Template.')
 })
 
-app.get('/version', (request, response) => {
-	console.log('Calling "/version" on the Node.js server.')
-	response.type('text/plain')
-	response.send('Version: '+majorVersion+'.'+minorVersion)
-})
 
-// Return the value of 2 plus 2.
-app.get('/2plus2', (request, response) => {
-	console.log('Calling "/2plus2" on the Node.js server.')
-	response.type('text/plain')
-	response.send('4')
-})
-
-// Add x and y which are both passed in on the URL. 
 app.get('/add-two-integers', (request, response) => {
 	console.log('Calling "/add-two-integers" on the Node.js server.')
 	var inputs = url.parse(request.url, true).query
@@ -105,7 +92,7 @@ var favoritePlaces = [
 app.get('/places', (request, response) => {
 	console.log('Calling "/places" on the Node.js server.')
 	response.type('application/json')
-	response.send(JSON.stringify(spiderMan, null, 4))
+	response.send(JSON.stringify(favoritePlaces, null))
 })
 
 // Custom 404 page.
