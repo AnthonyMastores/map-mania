@@ -2,7 +2,12 @@
 // 1 - Renamed "Map, Map, Map" to "myMapID, gMap, map"
 // 2 - Modified "bounds-changed" to "idle"
 
-
+window.onload = function () {
+    if (! localStorage.justOnce) {
+        localStorage.setItem("justOnce", "true");
+        window.location.reload();
+    }
+}
 var gMap;
 let favoritePlaces;
 let currentPlace; 
