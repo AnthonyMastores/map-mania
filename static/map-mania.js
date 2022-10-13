@@ -17,6 +17,7 @@ let score = 10;
         console.log("data")
         console.log(data)
         initApplication(data)
+        initMap();
     }catch(e) {
         console.log("There was a problem fetching my favorite places")
     }
