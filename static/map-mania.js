@@ -72,7 +72,7 @@ function updateGame() {
     var loc1 = new google.maps.LatLng(currentPlace["coordinates"].lat,currentPlace["coordinates"].lng)
     if (gMap.getBounds().contains(loc1)) {
         inBounds = true;
-        if (zoomLevel == 13){
+        if (zoomLevel >= 13){
             locationFound();
         }
     }
