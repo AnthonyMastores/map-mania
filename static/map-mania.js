@@ -10,22 +10,10 @@ let currentPlaceIndex = 9;
 let lat1;
 let lng1;
 let score;
-
-/*async function getPlaces= 9;() {
-    const res = await fetch('http://localhost:3000/places')
-    const favoritePlaces =  await res.json();
-    var currentPlaceIndex = 9;
-    var currentPlace = favoritePlaces[currentPlaceIndex];
-    console.log("favoritePlaces")
-    console.log(favoritePlaces)
-    console.log('currentPlace')
-    console.log(currentPlace)
-
-  // and give it some content
-  } */
+const placeUrl = "https://map-mania-am.azurewebsites.net/places"
   async function start() {
     try {
-        let response = await fetch ("http://localhost:3000/places")
+        let response = await fetch (placeUrl)
         let data = await response.json()
         console.log("data")
         console.log(data)
